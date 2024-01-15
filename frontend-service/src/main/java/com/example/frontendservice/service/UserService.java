@@ -10,5 +10,7 @@ public interface UserService {
 
     User getUserById(int id);
     String deleteUser(int id);
+
     List<User> getByKeyword(String keyword);
+
 }

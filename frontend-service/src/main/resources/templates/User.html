@@ -28,7 +28,7 @@
     <a th:href="@{/front/addUser}" class="btn btn-success">Add User</a>
     <hr>
     <form th:action="@{/front/showUser}" method="get">
-        <input type="text" name="keyword" th:value="${keyword}"  placeholder="Tìm kiếm danh mục" size="50" >
+        <input type="text" name="keyword" th:value="${keyword}"  placeholder="Tìm kiếm user" size="50" >
         <button type="submit" class="btn btn-info" >Search</button>
         <a th:href ="@{/front/showUser}" class="btn btn-info"> Reset</a>
     </form>

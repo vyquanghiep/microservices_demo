@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class ProductServiceIml implements ProductService{
+public class ProductSeviceIml implements ProductSevice{
     @Autowired
     private ProductRepository productRepository;
     @Override
@@ -27,12 +27,14 @@ public class ProductServiceIml implements ProductService{
     }
 
     @Override
+    public List<Product> getByKeyword(String keyword) {
+        return productRepository.findByKeyword(keyword);
+    }
+    @Override
     public String deleteProduct(int id) {
         productRepository.deleteById(id);
         return "Sản phẩm remove ||" + id;
     }
-    @Override
-    public List<Product> getByKeyword(String keyword) {
-        return productRepository.findByKeyword(keyword);
-    }
+
+
 }
