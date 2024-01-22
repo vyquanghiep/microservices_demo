@@ -20,10 +20,10 @@
     </ul>
 </nav>
 <div class="container" align="center">
-    <div th:unless="${user.idUser != null}">
+    <div th:unless="${user.id != null}">
         <h1>Create New User</h1>
     </div>
-    <div th:unless="${user.idUser == null}">
+    <div th:unless="${user.id == null}">
         <h1>Edit User</h1>
     </div>>
 
@@ -31,7 +31,7 @@
     <form action="#" th:action="@{/front/saveUser}" th:object = "${user}" method="POST">
 
         <div class="form-group">
-           <input type="hidden" th:field="*{idUser}" th:value="${user.idUser}">
+           <input type="hidden" th:field="*{id}" th:value="${user.id}">
 
             <input type="text" th:field="*{name}" placeholder="Name" class="form-control mb-4 col-4">
         </div>

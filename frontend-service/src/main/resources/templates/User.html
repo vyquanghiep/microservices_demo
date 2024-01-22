@@ -46,15 +46,15 @@
         </thead>
         <tbody>
         <tr th:each="us: ${listUsers}">
-            <td th:text="${us.idUser}"></td>
+            <td th:text="${us.id}"></td>
             <td th:text="${us.name}"></td>
             <td th:text="${us.email}"></td>
             <td th:text="${us.username}"></td>
             <td th:text="${us.password}"></td>
             <td th:text="${us.phone}"></td>
             <td><div class="btn-group">
-                <a th:href="@{/front/editUser/{id}(id=${us.idUser})}" class="btn btn-warning">Edit</a>
-                <a th:href="@{/front/deleteUser/{id}(id=${us.idUser})}" class="btn btn-danger">Delete</a>
+                <a th:href="@{/front/editUser/{id}(id=${us.id})}" class="btn btn-warning">Edit</a>
+                <a th:href="@{/front/deleteUser/{id}(id=${us.id})}" class="btn btn-danger">Delete</a>
             </div></td>
         </tr>
         </tbody>

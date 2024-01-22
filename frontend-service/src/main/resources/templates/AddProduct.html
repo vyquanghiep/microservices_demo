@@ -20,8 +20,8 @@
     </ul>
 </nav>
 <div class="container" align="center">
-    <div th:if="${product.id == null}"><h1>Create New Product</h1></div>
-    <div th:unless="${product.id == null}"><h1>Edit Product</h1></div>
+    <div th:if="${product.id == null}"><h1> Product</h1></div>
+    <div th:unless="${product.id == null}"><h1> Product</h1></div>
     <hr>
     <form action="#" th:action="@{/front/saveProduct}" th:object = "${product}" method="POST">
 

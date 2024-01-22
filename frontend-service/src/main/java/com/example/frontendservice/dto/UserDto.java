@@ -17,7 +17,7 @@ public class UserDto {
 
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
-        private int idUser;
+        private int id;
 
 
         private String name;
